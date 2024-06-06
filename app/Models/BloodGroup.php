@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class BloodGroup extends Model
 {
     use HasFactory;
+
+    public function donor(){
+        return $this->belongsTo(Donor::class);
+    }
 }
